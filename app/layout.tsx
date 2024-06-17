@@ -1,5 +1,8 @@
+import '../styles/globals.css'
 import '@radix-ui/themes/styles.css';
-import { Theme } from '@radix-ui/themes';
+import { Flex,Box } from '@radix-ui/themes';
+import { Header } from '../components/layouts/Header'
+import { Sidebar } from '../components/layouts/Sidebar'
 
 export default function RootLayout({
     children,
@@ -7,11 +10,13 @@ export default function RootLayout({
     children: React.ReactNode
   }) {
     return (
-      <html lang="en">
+      <html lang="ja">
         <body>
-          <Theme>
-            {children}
-          </Theme>
+          <Header />
+          <Flex>
+            <Box width={'240px'}><Sidebar /></Box>
+            <Box width={'auto'}>{children}</Box>
+          </Flex>
         </body>
       </html>
     )
