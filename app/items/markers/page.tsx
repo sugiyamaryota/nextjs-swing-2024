@@ -1,15 +1,15 @@
-import { createClient } from '../../utils/supabase/server'
+import { createClient } from '../../../utils/supabase/server'
 import { cookies } from 'next/headers'
 import { Section,Link } from '@radix-ui/themes';
 
 export default async function Page() {
   const cookieStore = cookies()
   const supabase = createClient(cookieStore)
-  const { data: users } = await supabase.from("users").select();
+  const { data: markers } = await supabase.from("markers").select();
     return (
       <Section>
-        {users?.map((user) =>
-          <Link key={user.id} href={`/users/${user.id}`}>{user.name}</Link>
+        {markers?.map((marker) =>
+          <Link key={marker.id} href={`/markers/${marker.id}`}>{marker.name}</Link>
         )}
       </Section>
     )

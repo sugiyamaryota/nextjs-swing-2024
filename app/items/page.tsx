@@ -5,11 +5,11 @@ import { Section,Link } from '@radix-ui/themes';
 export default async function Page() {
   const cookieStore = cookies()
   const supabase = createClient(cookieStore)
-  const { data: users } = await supabase.from("users").select();
+  const { data: items } = await supabase.from("items").select();
     return (
       <Section>
-        {users?.map((user) =>
-          <Link key={user.id} href={`/users/${user.id}`}>{user.name}</Link>
+        {items?.map((item) =>
+          <Link key={item.id} href={`/items/${item.id}`}>{item.id}</Link>
         )}
       </Section>
     )
