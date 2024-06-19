@@ -8,8 +8,9 @@ export default async function Page() {
   const { data: markers } = await supabase.from("markers").select();
     return (
       <Section>
+        <Link href='/items/markers/create'>メーカー登録</Link>
         {markers?.map((marker) =>
-          <Link key={marker.id} href={`/markers/${marker.id}`}>{marker.name}</Link>
+          <Link key={marker.id} href={`/items/markers/${marker.id}`}>{marker.name}</Link>
         )}
       </Section>
     )

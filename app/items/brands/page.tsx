@@ -9,7 +9,7 @@ export default async function Page() {
     return (
       <Section>
         {brands?.map((brand) =>
-          <Link key={brand.id} href={`/brands/${brand.id}`}>{brand.name}</Link>
+          <Link key={brand.id} href={`/items/brands/${brand.id}`}>{brand.name}</Link>
         )}
       </Section>
     )
