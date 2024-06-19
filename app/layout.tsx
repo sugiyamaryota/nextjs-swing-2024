@@ -3,6 +3,7 @@ import '@radix-ui/themes/styles.css';
 import { Flex,Box } from '@radix-ui/themes';
 import { Header } from '../components/layouts/Header'
 import { Sidebar } from '../components/layouts/Sidebar'
+import SupabaseListener from '../components/supabase-listener'
 
 export default function RootLayout({
     children,
@@ -12,6 +13,7 @@ export default function RootLayout({
     return (
       <html lang="ja">
         <body>
+          <SupabaseListener />
           <Header />
           <Flex>
             <Box width={'240px'}><Sidebar /></Box>
