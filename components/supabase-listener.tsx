@@ -1,6 +1,6 @@
 "use server"
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import Navigation from './navigation'
 import type { Database } from '../libs/database.type'
 type ProfileType = Database['public']['Tables']['profiles']['Row']

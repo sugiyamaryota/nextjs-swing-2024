@@ -28,7 +28,9 @@ const Navigation = ({
         <>
         {session ? (
             <Link href="/settings/profile">
-                profile
+                <div className="relative w-10 h-10">
+                    <Image src={profile && profile.avatar_url ? profile.avatar_url : ''} alt="avatar" fill />
+                </div>
             </Link>
         ) : (
             <>

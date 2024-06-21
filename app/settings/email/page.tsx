@@ -2,15 +2,15 @@ import { cookies } from 'next/headers';
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { redirect } from 'next/navigation';
 import type { Database } from '../../../libs/database.type'
-import Profile from '../../../components/profile'
+import Email from '../../../components/email'
 
-const ProfilePage = async () => {
+const EmailPage = async () => {
     const supabase = createServerComponentClient<Database>({cookies})
     const {data: {session}} = await supabase.auth.getSession()
     if(!session){
         redirect('/auth/login')
     }
-    return <Profile />
+    return <Email email={session.user.email!} />
 }
 
-export default ProfilePage
+export default EmailPage

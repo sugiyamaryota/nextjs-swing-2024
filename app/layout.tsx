@@ -16,7 +16,9 @@ export default function RootLayout({
           <SupabaseListener />
           <Header />
           <Flex>
-            <Box width={'240px'}><Sidebar /></Box>
+            <Box width={'240px'}>
+              {/* <Sidebar /> */}
+            </Box>
             <Box width={'auto'}>{children}</Box>
           </Flex>
         </body>

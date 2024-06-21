@@ -22,7 +22,7 @@ const subNavigation = [
     },
 ]
 
-const SettingsLayout = ({ children }: {children: React.ReactNode}) => {
+const SettingsLayout = ({ children }: { children: React.ReactNode }) => {
     const pathname = usePathname()
     return (
         <div>
