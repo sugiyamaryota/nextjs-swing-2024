@@ -10,15 +10,15 @@ const subNavigation = [
     },
     {
         name: 'メールアドレス',
-        href: 'settings/email'
+        href: '/settings/email'
     },
     {
         name: 'パスワード',
-        href: 'settings/password'
+        href: '/settings/password'
     },
     {
         name: 'ログアウト',
-        href: 'settings/logout'
+        href: '/settings/logout'
     },
 ]
 
