@@ -10,3 +10,5 @@ https://supabase.com/docs/guides/getting-started/quickstarts/nextjs
 ・api, swr/apollo
 ・form
 ・test
+
+vercelにdeployしてみる。
