@@ -12,3 +12,5 @@ https://supabase.com/docs/guides/getting-started/quickstarts/nextjs
 ・test
 
 vercelにdeployしてみる。
+⇨してみたが、SSGでデプロイされてしまうっぽい
+awsでデプロイしてみようかな。
